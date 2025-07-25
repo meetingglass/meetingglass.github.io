@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EULA | MeetingGlass</title>
     <meta name="description" content="MeetingGlass' end-user license agreement."/>
-  <meta name="google-site-verification" content="xO5Jn3qnCI009nTRBYBoSEEZCRrTnsy1XyJTaJuQ9yY"/>
+    <meta name="google-site-verification" content="xO5Jn3qnCI009nTRBYBoSEEZCRrTnsy1XyJTaJuQ9yY"/>
     <link rel="icon" sizes="192x192" href="meetingglass_logo.png" type="image/png">
     <link rel="shortcut icon" href="shortcut-icon.png" type="image/png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png" type="image/png">
@@ -15,24 +15,55 @@
             font-family: Verdana, Geneva, sans-serif;
             margin: 0;
             background-color: #f0f0f0;
+            line-height: 1.5;
         }
 
         .container {
             max-width: 980px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px;
         }
 
         header {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             padding: 10px 0;
         }
 
+        nav ul {
+            list-style: none;
+            margin: 15px 0 0 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 5px 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
         .section {
-            padding: 40px 20px;
-            margin-bottom: 20px;
+            padding: 20px 10px;
+            margin-bottom: 15px;
+            overflow-x: auto;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
         }
 
         footer {
@@ -40,17 +71,46 @@
             padding: 20px;
             font-size: 14px;
         }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .section {
+                padding: 40px 20px;
+                margin-bottom: 20px;
+            }
+            
+            pre {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header class="container">
         <a href="index.html">
-            <img src="meetingglass_site_logo_304x73.png" alt="MeetingGlass logo" style="width:229px;height:53px;">
+            <img src="meetingglass_site_logo_304x73.png" alt="MeetingGlass logo" style="max-width:229px;height:auto;">
         </a>
+        <nav>
+            <ul>
+                <li><a href="visual-privacy-features.html">Privacy</a></li>
+                <li><a href="index.html#advantages">Advantages</a></li>
+                <li><a href="index.html#benefits">Benefits</a></li>
+                <li><a href="https://meetingglass.substack.com/" target="_blank">Blog</a></li>
+            </ul>
+        </nav>
     </header>
     <main class="container">
         <section class="section">
-		<pre>
+            <pre>
 MEETINGGLASS SOFTWARE LICENSE AGREEMENT
 IMPORTANT: YOU SHOULD CAREFULLY READ THIS
 LEGAL AGREEMENT BEFORE INSTALLING THIS PACKAGE.
@@ -61,7 +121,6 @@ IF THESE TERMS AND CONDITIONS ARE NOT ACCEPTABLE TO YOU,
 DO NOT CONTINUE TO INSTALL OR USE THIS SOFTWARE.
 
 MEETINGGLASS SOFTWARE LICENSE AGREEMENT LICENSE TERMS
-
 
 Oleg Galkin - the Author of MeetingGlass software product ("Author")
 grants you ("Customer") a license to use the software product MeetingGlass
@@ -118,12 +177,12 @@ MeetingGlass affiliates and advertisers may also use cookies.
 CUSTOMER HEREBY ACKNOWLEDGES THAT CUSTOMER HAS READ
 THIS AGREEMENT, UNDERSTANDS IT AND AGREES TO BE BOUND
 BY ITS TERMS AND CONDITIONS.
-</pre>
-		</section>
+            </pre>
+        </section>
     </main>
-     <footer>
+    <footer>
         <div class="container">
-             <div style="margin-bottom: 20px;"><ms-store-badge productid="9NJLDHJWLFV7" window-mode="full" animation="on"></ms-store-badge></div>
+            <div style="margin-bottom: 20px;"><ms-store-badge productid="9NJLDHJWLFV7" window-mode="full" animation="on"></ms-store-badge></div>
             <div style="margin-bottom: 20px;">
                 <a href="https://twitter.com/MeetingGlassApp?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @MeetingGlassApp</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -132,7 +191,7 @@ BY ITS TERMS AND CONDITIONS.
             <p>This software uses code of <a href="https://ffmpeg.org/" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;">FFmpeg</a> licensed under the <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;">LGPLv2.1</a> and its source can be downloaded <a href="ffmpeg-source-code.zip" target="_blank" style="text-decoration:underline;">here</a>.</p>
             <p>This software uses code of <a href="https://mpv.io/" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;">mpv player</a> and its source can be downloaded <a href="mpv-player-source-code.zip" target="_blank" style="text-decoration:underline;">here</a>.</p>
             <p><a href="meetingglass-eula.html" target="_self" style="text-decoration:underline;">EULA</a></p>
-			<p>Latest app update: 07/24/2025 (update #91)</p>
+            <p>Latest app update: 07/24/2025 (update #91)</p>
         </div>
     </footer>
 </body>
