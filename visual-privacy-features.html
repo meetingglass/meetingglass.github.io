@@ -31,59 +31,55 @@
         .container {
             max-width: 980px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px;
         }
 
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 10px 0;
         }
 
         nav ul {
             list-style: none;
-            margin: 0;
+            margin: 15px 0 0 0;
             padding: 0;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         nav li {
-            margin-left: 20px;
+            margin: 5px 10px;
         }
 
         nav a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
-            font-size: large;
+            font-size: 1rem;
         }
 
         .section {
-            padding: 40px 20px;
-            margin-bottom: 20px;
+            padding: 25px 15px;
+            margin-bottom: 15px;
         }
 
         .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
         }
 
         .feature-item {
             text-align: center;
         }
-        .feature-item.left {
-            text-align: left;
-        }
-        .feature-item.right {
-            text-align: right;
-        }
 
         .feature-item img {
             max-width: 100%;
             height: auto;
+            margin: 0 auto;
         }
 
         footer {
@@ -91,87 +87,142 @@
             padding: 20px;
             font-size: 14px;
         }
+
+        /* Mobile-specific styles */
+        @media (min-width: 768px) {
+            header {
+                justify-content: space-between;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .section {
+                padding: 40px 20px;
+                margin-bottom: 20px;
+            }
+            
+            .features {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                align-items: center;
+            }
+            
+            .feature-item.left {
+                text-align: left;
+            }
+            
+            .feature-item.right {
+                text-align: right;
+            }
+        }
+
+        /* Adjust font sizes for mobile */
+        @media (max-width: 767px) {
+            h1 {
+                font-size: 2rem !important;
+            }
+            
+            h2 {
+                font-size: 1.5rem !important;
+            }
+            
+            p {
+                font-size: 1rem !important;
+                line-height: 1.5 !important;
+            }
+        }
     </style>
 </head>
 <body>
     <header class="container">
         <a href="https://www.meetingglass.com">
-            <img src="meetingglass_site_logo_304x73.png" alt="MeetingGlass logo" style="width:229px;height:53px;">
+            <img src="meetingglass_site_logo_304x73.png" alt="MeetingGlass logo" style="max-width:229px;height:auto;">
         </a>
+        <nav>
+            <ul>
+                <li><a href="visual-privacy-features.html">Privacy</a></li>
+                <li><a href="index.html#advantages">Advantages</a></li>
+                <li><a href="index.html#benefits">Benefits</a></li>
+                <li><a href="https://meetingglass.substack.com/" target="_blank">Blog</a></li>
+            </ul>
+        </nav>
     </header>
     <main class="container">
         <section class="section">
-            <h1 style="font-size:46px; font-weight:bold;">Privacy</h1>
-            <p style="font-size:32px; line-height:1.5em;">Like physical frosted glass:</p>
+            <h1 style="font-weight:bold;">Privacy</h1>
+            <p style="line-height:1.5em;">Like physical frosted glass:</p>
         </section>
 
-        <section class="section features">
-            <div class="feature-item">
-                <img src="visibility_is_mutual.gif" alt="Video is mutual" style="width:406px;height:298px;">
-            </div>
-            <div>
-                <h2 style="font-size:40px;">1. Visibility is Mutual</h2>
-                <p style="font-size:26px;">👤 You ⇄ 👤 Them <br><br>Your camera ON = See others<br>Their camera ON = See you<br><br>Like real glass: No one-way viewing.</p>
-            </div>
-        </section>
-
-        <section class="section features">
-             <div class="feature-item right">
-                <h2 style="font-size:40px;">2. Frosted by Default</h2>
-                <p style="font-size:26px;">Even when visible, you appear behind frosted glass. Others see your presence but not the details of what you are doing.</p>
-            </div>
-            <div class="feature-item left">
-                <img src="frosted_by_default.gif" alt="Frosted by default" style="width:419px;height:236px;">
+        <section class="section">
+            <div class="features">
+                <div class="feature-item">
+                    <img src="visibility_is_mutual.gif" alt="Video is mutual">
+                    <h2>1. Visibility is Mutual</h2>
+                    <p>👤 You ⇄ 👤 Them <br><br>Your camera ON = See others<br>Their camera ON = See you<br><br>Like real glass: No one-way viewing.</p>
+                </div>
             </div>
         </section>
 
-        <section class="section features">
-            <div class="feature-item">
-                <img src="click_to_unfrost.gif" alt="Click to unfrost" style="width:389px;height:218px;">
-            </div>
-            <div>
-                <h2 style="font-size:40px;">3. Click to Unfrost</h2>
-                <p style="font-size:26px;">Click to gradually unfrost a user.</p>
+        <section class="section">
+            <div class="features">
+                <div class="feature-item">
+                    <img src="frosted_by_default.gif" alt="Frosted by default">
+                    <h2>2. Frosted by Default</h2>
+                    <p>Even when visible, you appear behind frosted glass. Others see your presence but not the details of what you are doing.</p>
+                </div>
             </div>
         </section>
 
-        <section class="section features">
-            <div class="feature-item right">
-                <h2 style="font-size:40px;">4. Confirm Unfrost</h2>
-                <p style="font-size:26px;">You decide if you will be unfrosted or not.</p>
+        <section class="section">
+            <div class="features">
+                <div class="feature-item">
+                    <img src="click_to_unfrost.gif" alt="Click to unfrost">
+                    <h2>3. Click to Unfrost</h2>
+                    <p>Click to gradually unfrost a user.</p>
+                </div>
             </div>
-            <div class="feature-item left">
-                <img src="julia_requests_face_to_face_with_you_con.png" alt="Confirm your unfrost" style="width:351px;height:197px;">
+        </section>
+
+        <section class="section">
+            <div class="features">
+                <div class="feature-item">
+                    <img src="julia_requests_face_to_face_with_you_con.png" alt="Confirm your unfrost">
+                    <h2>4. Confirm Unfrost</h2>
+                    <p>You decide if you will be unfrosted or not.</p>
+                </div>
             </div>
         </section>
         
-        <section class="section features">
-			<div class="feature-item">
-                <img src="meeting_types.png" alt="Privacy levels" style="width:445px;height:426px;">
-            </div>
-            <div>
-                <h2 style="font-size:40px;">5. Different Privacy Levels</h2>
-                <p style="font-size:26px;">Choose a comfortable privacy level for meeting participants.</p>
+        <section class="section">
+            <div class="features">
+                <div class="feature-item">
+                    <img src="meeting_types.png" alt="Privacy levels">
+                    <h2>5. Different Privacy Levels</h2>
+                    <p>Choose a comfortable privacy level for meeting participants.</p>
+                </div>
             </div>
         </section>
 
-        <section class="section features">
-			<div class="feature-item right">
-                <h2 style="font-size:40px;">6. Convenient Video Modes</h2>
-                <p style="font-size:26px;">You select a video mode to be applied to <strong>every</strong> meeting participant.</p>
-            </div>
-            <div class="feature-item left">
-                <img src="camera_modes.png" alt="Video modes" style="width:417px;height:221px;">
+        <section class="section">
+            <div class="features">
+                <div class="feature-item">
+                    <img src="camera_modes.png" alt="Video modes">
+                    <h2>6. Convenient Video Modes</h2>
+                    <p>You select a video mode to be applied to <strong>every</strong> meeting participant.</p>
+                </div>
             </div>
         </section>
         
-        <section class="section features">
-			<div class="feature-item">
-                <img src="video_size.png" alt="Equal sizes of everyone's live videos" style="width:459px;height:242px;">
-            </div>
-             <div>
-                <h2 style="font-size:40px;">7. Equal sizes of everyone’s live videos</h2>
-                <p style="font-size:26px;">Size is the “distance” between users. <br> You set up the size of live video feeds of all users.</p>
+        <section class="section">
+            <div class="features">
+                <div class="feature-item">
+                    <img src="video_size.png" alt="Equal sizes of everyone's live videos">
+                    <h2>7. Equal sizes of everyone's live videos</h2>
+                    <p>Size is the "distance" between users. <br> You set up the size of live video feeds of all users.</p>
+                </div>
             </div>
         </section>
     </main>

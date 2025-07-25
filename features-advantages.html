@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Features &amp; Advantages | MeetingGlass</title>
     <meta name="description" content="Features of MeetingGlass and its advantages over other alternatives."/>
-  <meta property="og:title" content="Features &amp; Advantages | MeetingGlass"/>
-  <meta property="og:description" content="Features of MeetingGlass and its advantages over other alternatives."/>
-  <meta property="og:image" content="https://meetingglass.com/twitter_facebook_thumbnail.png"/>
-  <meta property="og:image:width" content="798"/>
-  <meta property="og:image:height" content="566"/>
-  <meta property="og:site_name" content="MeetingGlass"/>
-  <meta property="og:type" content="website"/>
-  <meta name="google-site-verification" content="xO5Jn3qnCI009nTRBYBoSEEZCRrTnsy1XyJTaJuQ9yY"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Features &amp; Advantages | MeetingGlass"/>
-  <meta name="twitter:description" content="Features of MeetingGlass and its advantages over other alternatives."/>
-  <meta name="twitter:image" content="https://meetingglass.com/twitter_facebook_thumbnail.png"/>
+    <meta property="og:title" content="Features &amp; Advantages | MeetingGlass"/>
+    <meta property="og:description" content="Features of MeetingGlass and its advantages over other alternatives."/>
+    <meta property="og:image" content="https://meetingglass.com/twitter_facebook_thumbnail.png"/>
+    <meta property="og:image:width" content="798"/>
+    <meta property="og:image:height" content="566"/>
+    <meta property="og:site_name" content="MeetingGlass"/>
+    <meta property="og:type" content="website"/>
+    <meta name="google-site-verification" content="xO5Jn3qnCI009nTRBYBoSEEZCRrTnsy1XyJTaJuQ9yY"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Features &amp; Advantages | MeetingGlass"/>
+    <meta name="twitter:description" content="Features of MeetingGlass and its advantages over other alternatives."/>
+    <meta name="twitter:image" content="https://meetingglass.com/twitter_facebook_thumbnail.png"/>
     <link rel="icon" sizes="192x192" href="meetingglass_logo.png" type="image/png">
     <link rel="shortcut icon" href="shortcut-icon.png" type="image/png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png" type="image/png">
@@ -31,44 +31,47 @@
         .container {
             max-width: 980px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px;
         }
 
         header {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             padding: 10px 0;
         }
 
         nav ul {
             list-style: none;
-            margin: 0;
+            margin: 15px 0 0 0;
             padding: 0;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         nav li {
-            margin-left: 20px;
+            margin: 5px 10px;
         }
 
         nav a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
-            font-size: large;
+            font-size: 1rem;
         }
-		
-		ul {
+        
+        ul {
             list-style-type: disc;
             padding-left: 20px;
         }
-		
+        
         li {
-            margin-bottom: 10px;
-            font-size: 24px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            line-height: 1.5;
         }
-		
+        
         ul ul {
             list-style-type: circle;
             margin-top: 10px;
@@ -76,8 +79,15 @@
         }
 
         .section {
-            padding: 40px 20px;
-            margin-bottom: 20px;
+            padding: 25px 15px;
+            margin-bottom: 15px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
         }
 
         footer {
@@ -85,47 +95,86 @@
             padding: 20px;
             font-size: 14px;
         }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            nav ul {
+                margin: 0;
+                justify-content: flex-end;
+            }
+            
+            nav li {
+                margin-left: 20px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .section {
+                padding: 40px 20px;
+                margin-bottom: 20px;
+            }
+            
+            li {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <header class="container">
         <a href="https://www.meetingglass.com">
-            <img src="meetingglass_site_logo_304x73.png" alt="MeetingGlass logo" style="width:229px;height:53px;">
+            <img src="meetingglass_site_logo_304x73.png" alt="MeetingGlass logo" style="max-width:229px;height:auto;">
         </a>
+        <nav>
+            <ul>
+                <li><a href="visual-privacy-features.html">Privacy</a></li>
+                <li><a href="index.html#advantages">Advantages</a></li>
+                <li><a href="index.html#benefits">Benefits</a></li>
+                <li><a href="https://meetingglass.substack.com/" target="_blank">Blog</a></li>
+            </ul>
+        </nav>
     </header>
     <main class="container">
         <section class="section">
-            <h1 style="font-size:46px; font-weight:bold;">Advantages</h1>
+            <h1 style="font-weight:bold;">Advantages</h1>
 
-			<ul>
-				<li>Video is <a href="visual-privacy-features.html">mutual</a><br><p align="center"><img src="visibility_is_mutual.gif" alt="Visibility is Mutual"></p></li>
-				<li>Comfortable video presence balanced with <a href="visual-privacy-features.html">privacy</a><br><p align="center"><img src="frosted_presence.gif" alt="Frosted Presence"></p></li>
-				<li>Designed for spontaneous communication</li>
-				<li>Low CPU consumption</li>
-				<li>Low bandwidth consumption</li>
-				<li>Customizable <a href="visual-privacy-features.html">privacy</a> to achieve maximum level of comfort<br><p align="center"><img src="camera_modes.png" alt="Camera Modes"  style="width:430px;height:228px;"></p><br><p align="center"><img src="meeting_types.png" alt="Camera Modes"></p></li>
-				<li>One click to gain additional awareness (in Team Room <a href="visual-privacy-features.html">privacy</a> level)<br><p align="center"><img src="click_to_unfrost.gif" alt="One Click to Unfrost"></p></li>
-				<li>One click for an unconstrained visual contact (in Team Room <a href="visual-privacy-features.html">privacy</a> level)<br><p align="center"><img src="face_user.gif" alt="One Click to Face a User"></p></li>
-				<li><a href="visual-privacy-features.html">Customizable size</a> of video for all users<br><p align="center"><img src="video_size.png" alt="Set up the size of live video feeds" style="width:798px;height:418px;"></p></li>
-				<li>60-seconds install and setup</li>
-				<li>No registration required</li>
-				<li>Try solo or with colleagues</li>
-				<li>Convenient shortcuts to (un)mute your microphone in a split second</li>
-				<li>No distracting sounds:
-					<ul>
-						<li>Adjustable volume of sound coming from others</li>
-					</ul>
-				</li>
-				<li>No microphone worries:
-					<ul>
-						<li>Big &amp; clear muted / unmuted microphone indication</li>
-					</ul>
-				</li>
-				<li>Fast screen sharing​</li>
-				<li>Unlimited meeting time</li>
-				<li>Join a meeting when Windows starts</li>
-			</ul>
-		</section>
+            <ul>
+                <li>Video is <a href="visual-privacy-features.html">mutual</a><br><img src="visibility_is_mutual.gif" alt="Visibility is Mutual"></li>
+                <li>Comfortable video presence balanced with <a href="visual-privacy-features.html">privacy</a><br><img src="frosted_presence.gif" alt="Frosted Presence"></li>
+                <li>Designed for spontaneous communication</li>
+                <li>Low CPU consumption</li>
+                <li>Low bandwidth consumption</li>
+                <li>Customizable <a href="visual-privacy-features.html">privacy</a> to achieve maximum level of comfort<br><img src="camera_modes.png" alt="Camera Modes"><br><img src="meeting_types.png" alt="Camera Modes"></li>
+                <li>One click to gain additional awareness (in Team Room <a href="visual-privacy-features.html">privacy</a> level)<br><img src="click_to_unfrost.gif" alt="One Click to Unfrost"></li>
+                <li>One click for an unconstrained visual contact (in Team Room <a href="visual-privacy-features.html">privacy</a> level)<br><img src="face_user.gif" alt="One Click to Face a User"></li>
+                <li><a href="visual-privacy-features.html">Customizable size</a> of video for all users<br><img src="video_size.png" alt="Set up the size of live video feeds"></li>
+                <li>60-seconds install and setup</li>
+                <li>No registration required</li>
+                <li>Try solo or with colleagues</li>
+                <li>Convenient shortcuts to (un)mute your microphone in a split second</li>
+                <li>No distracting sounds:
+                    <ul>
+                        <li>Adjustable volume of sound coming from others</li>
+                    </ul>
+                </li>
+                <li>No microphone worries:
+                    <ul>
+                        <li>Big &amp; clear muted / unmuted microphone indication</li>
+                    </ul>
+                </li>
+                <li>Fast screen sharing​</li>
+                <li>Unlimited meeting time</li>
+                <li>Join a meeting when Windows starts</li>
+            </ul>
+        </section>
     </main>
      <footer>
         <div class="container">
@@ -138,7 +187,7 @@
             <p>This software uses code of <a href="https://ffmpeg.org/" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;">FFmpeg</a> licensed under the <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;">LGPLv2.1</a> and its source can be downloaded <a href="ffmpeg-source-code.zip" target="_blank" style="text-decoration:underline;">here</a>.</p>
             <p>This software uses code of <a href="https://mpv.io/" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;">mpv player</a> and its source can be downloaded <a href="mpv-player-source-code.zip" target="_blank" style="text-decoration:underline;">here</a>.</p>
             <p><a href="meetingglass-eula.html" target="_self" style="text-decoration:underline;">EULA</a></p>
-			<p>Latest app update: 07/24/2025 (update #91)</p>
+            <p>Latest app update: 07/24/2025 (update #91)</p>
         </div>
     </footer>
 </body>
